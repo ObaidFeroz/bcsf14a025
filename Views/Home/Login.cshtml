@@ -1,0 +1,54 @@
+﻿@model project.Models.user
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Badar Jewellers</title>
+<link href="/Content/login_signup/style.css" rel="stylesheet" type="text/css" media="all"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Transparent Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+<!--web-fonts-->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css' />
+<!--web-fonts-->
+</head>
+
+<body>
+<!--header-->
+	<div class="header-w3l">
+		<h1> Badar Jewellers</h1>
+        <br />
+        <h2 style="font-size:22px; color:white;">Login to proceed</h2>
+	</div>
+<!--//header-->
+
+<!--main-->
+<div class="main-content-agile">
+	<div class="sub-main-w3">
+        
+           @using (Html.BeginForm()){ 
+                @Html.TextBoxFor(m => m.email, new { placeholder = "Email" })
+                @Html.ValidationMessageFor(m => m.email)
+
+               <br />
+                
+                @Html.PasswordFor(m => m.password, new { placeholder = "Password" })<br />
+                @Html.ValidationMessageFor(m => m.password)
+               <br />
+
+               <input type="submit" value="">
+ 
+            }
+               
+	</div>
+</div>
+<!--//main-->
+
+<!--footer-->
+<div class="footer">
+	<p>&copy; 2017 Badar Jewellers. All rights reserved </p>
+</div>
+<!--//footer-->
+
+</body>
+</html>
